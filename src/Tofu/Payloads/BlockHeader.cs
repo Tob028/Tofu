@@ -1,6 +1,6 @@
 namespace Tofu.Payloads
 {
-    class BlockHeader
+    public class BlockHeader
     {
         /// <summary>
         /// The version of the block

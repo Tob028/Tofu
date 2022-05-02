@@ -1,6 +1,6 @@
 namespace Tofu.Payloads
 {
-    class Block
+    public class Block
     {
         /// <summary>
         /// The hash of the block

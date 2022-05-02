@@ -17,6 +17,18 @@
 | `src/` | `Payloads/` | Classes that represent parts of blockchain |
 
 ## Installation
+
+Right now, project is in development.
+
 ## Documentation
+
+Currently, documentation is not ready yet.
+
 ## Contributing
+
+Currently there is no way to contribute to this project. Please wait until core library is finished.  
+Thanks for your patience.
+
 ## License
+
+Tofu project isn't currently licensed.
