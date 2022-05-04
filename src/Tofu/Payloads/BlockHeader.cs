@@ -26,5 +26,14 @@ namespace Tofu.Payloads
         /// The merkle root of the block
         /// </summary>
         public string MerkleRoot { get; set; }
+
+        public BlockHeader(string prevHash, string version, string timestamp, string merkleRoot, int nonce)
+        {
+            PrevHash = prevHash;
+            Version = version;
+            Timestamp = timestamp;
+            MerkleRoot = merkleRoot;
+            Nonce = nonce;
+        }
     }
 }

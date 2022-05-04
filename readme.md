@@ -15,6 +15,7 @@
 | `src/` | `Ledger/` | Classes impelementing shared ledger |
 | `src/` | `Network/` | Peer-to-peer protocol |
 | `src/` | `Payloads/` | Classes that represent parts of blockchain |
+| `src/` | `Wallet/` | Wallet and Account implementation |
 
 ## Installation
 

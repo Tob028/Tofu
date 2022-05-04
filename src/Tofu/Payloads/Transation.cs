@@ -1,8 +1,5 @@
 namespace Tofu.Payloads
 {
-    /// <summary>
-    /// A transaction payload.
-    /// </summary>
     public class Transaction
     {
         /// <summary>

@@ -27,5 +27,12 @@ namespace Tofu.Payloads
         public int Nonce => Header.Nonce;
         public string Timestamp => Header.Timestamp;
         public string MerkleRoot => Header.MerkleRoot;
+
+        public Block(int index, string prevHash, string version, string timestamp, string merkleRoot, int nonce)
+        {
+            Index = index;
+            Header = new BlockHeader(prevHash, version, timestamp, merkleRoot, nonce);
+            Transactions = new List<Transaction>();
+        }
     }
 }

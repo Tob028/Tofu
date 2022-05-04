@@ -8,6 +8,7 @@ namespace Tofu.Ledger
     {
         public static Block CreateGenesisBlock()
         {
+            return new Block();
         }
     }
 }

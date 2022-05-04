@@ -1,11 +1,12 @@
 using System;
 
+using Tofu;
 using Tofu.Payloads;
 using Tofu.Cryptography;
 
 namespace Tofu.Ledger
 {
-    class Blockchain
+    public class TransactionPool
     {
         /// <summary>
         /// List of transactions waiting to be added to the blockchain
@@ -15,7 +16,7 @@ namespace Tofu.Ledger
         /// <summary>
         /// Capacity of the transaction pool
         /// </summary>
-        int TransactionPoolCapacity = 2;
+        int TransactionPoolCapacity => TofuSystem.Settings.TransactionPoolCapacity;
 
         /// <summary>
         // Add transaction to the transaction pool
