@@ -5,7 +5,7 @@ namespace Tofu.Payloads
         /// <summary>
         /// The version of the block
         /// </summary>
-        public string Version { get; set; }
+        public int Version { get; set; }
 
         /// <summary>
         /// The hash of the previous block
@@ -20,14 +20,14 @@ namespace Tofu.Payloads
         /// <summary>
         /// The timestamp of the block
         /// </summary>
-        public string Timestamp { get; set; }
+        public DateTime Timestamp { get; set; }
 
         /// <summary>
         /// The merkle root of the block
         /// </summary>
         public string MerkleRoot { get; set; }
 
-        public BlockHeader(string prevHash, string version, string timestamp, string merkleRoot, int nonce)
+        public BlockHeader(string prevHash, int version, DateTime timestamp, string merkleRoot, int nonce)
         {
             PrevHash = prevHash;
             Version = version;

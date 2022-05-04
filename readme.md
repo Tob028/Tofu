@@ -12,7 +12,7 @@
 | Parent | Folder | Contents |
 | ------ | ------ | -------- |
 | `src/` | `Cryptography/` | All classes regarding cryptography |
-| `src/` | `Ledger/` | Classes impelementing shared ledger |
+| `src/` | `Ledger/` | Classes impelementing shared ledger, including `TransactionPool` and `Blockchain` |
 | `src/` | `Network/` | Peer-to-peer protocol |
 | `src/` | `Payloads/` | Classes that represent parts of blockchain |
 | `src/` | `Wallet/` | Wallet and Account implementation |

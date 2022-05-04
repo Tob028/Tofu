@@ -1,3 +1,5 @@
+
+
 namespace Tofu.Payloads
 {
     public class Transaction
@@ -25,6 +27,22 @@ namespace Tofu.Payloads
         /// <summary>
         /// Timestamp of the transaction
         /// </summary>
-        public string Timestamp { get; set; }
+        public DateTime Timestamp { get; set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Transaction"/> class.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="recipient">Recipient.</param>
+        /// <param name="amount">Amount.</param>
+        /// <param name="fee">Fee.</param>
+        public Transaction(string sender, string recipient, int amount, int fee)
+        {
+            Sender = sender;
+            Recipient = recipient;
+            Amount = amount;
+            Fee = fee;
+            Timestamp = DateTime.UtcNow;
+        }
     }
 }

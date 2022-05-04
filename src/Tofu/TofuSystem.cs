@@ -15,7 +15,7 @@ namespace Tofu
 
         public TofuSystem(ProtocolSettings settings)
         {
-            Settings = settings;
+            //Settings = settings;
         }
     }
 }

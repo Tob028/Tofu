@@ -1,6 +1,5 @@
-using System;
-using System.Json;
-using System.IO;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Tofu
 {
@@ -26,7 +25,7 @@ namespace Tofu
         /// <returns>The loaded settings</returns>
         public static ProtocolSettings LoadFromFile(string filePath)
         {
-            return JsonConvert.DeserializeObject<ProtocolSettings>(File.ReadAllText(filePath));
+            return JsonSerializer.Deserialize<ProtocolSettings>(File.ReadAllText(filePath));
         }
     }
 }

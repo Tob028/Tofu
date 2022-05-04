@@ -2,7 +2,7 @@ namespace Tofu.Cryptography
 {
     public class ProofOfWork
     {
-        public static ProofOfWork()
+        static ProofOfWork()
         {
         }
     }

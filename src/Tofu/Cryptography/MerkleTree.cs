@@ -28,7 +28,7 @@ namespace Tofu.Cryptography
                 }
                 else
                 {
-                    newHashes.Add(Crypto.SHA256(string.Concat(hashes[i], hashes[i + 1])));
+                    newHashes.Add(Crypto.ToHex(Crypto.SHA256Hash(string.Concat(hashes[i], hashes[i + 1]))));
                 }
             }
 

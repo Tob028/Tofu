@@ -22,17 +22,16 @@ namespace Tofu.Payloads
         /// </summary>
         public List<Transaction> Transactions { get; set; }
         
-        public string Version => Header.Version;
+        public int Version => Header.Version;
         public string PrevHash => Header.PrevHash;
         public int Nonce => Header.Nonce;
-        public string Timestamp => Header.Timestamp;
+        public DateTime Timestamp => Header.Timestamp;
         public string MerkleRoot => Header.MerkleRoot;
 
-        public Block(int index, string prevHash, string version, string timestamp, string merkleRoot, int nonce)
+        public Block(BlockHeader header, List<Transaction> transactions)
         {
-            Index = index;
-            Header = new BlockHeader(prevHash, version, timestamp, merkleRoot, nonce);
-            Transactions = new List<Transaction>();
+            Header = header;
+            Transactions = transactions;
         }
     }
 }
