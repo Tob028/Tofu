@@ -44,5 +44,14 @@ namespace Tofu.Payloads
             Fee = fee;
             Timestamp = DateTime.UtcNow;
         }
+
+        /// <summary>
+        /// Returns the <see cref="Transaction"/> as a string.
+        /// </summary>
+        /// <returns>The string.</returns>
+        public override string ToString()
+        {
+            return $"{Sender} -> {Recipient} ({Amount} + {Fee})";
+        }
     }
 }

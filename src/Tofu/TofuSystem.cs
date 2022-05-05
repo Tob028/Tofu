@@ -13,6 +13,11 @@ namespace Tofu
         /// </summary>
         public static ProtocolSettings Settings { get; }
 
+        /// <summary>
+        /// The blockchain instance.
+        /// </summary>
+        public static Blockchain Blockchain { get; } = new Blockchain();
+
         public TofuSystem(ProtocolSettings settings)
         {
             //Settings = settings;

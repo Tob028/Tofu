@@ -25,7 +25,8 @@ namespace Tofu
         /// <returns>The loaded settings</returns>
         public static ProtocolSettings LoadFromFile(string filePath)
         {
-            return JsonSerializer.Deserialize<ProtocolSettings>(File.ReadAllText(filePath));
+            var settings = JsonSerializer.Deserialize<ProtocolSettings>(File.ReadAllText(filePath));
+            return settings != null ? settings : new ProtocolSettings();
         }
     }
 }
