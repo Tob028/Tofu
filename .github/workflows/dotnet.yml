@@ -1,25 +1,38 @@
-name: .NET
+name: .NET Core Test and Publish
 
 on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ main ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+    name: Build
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: 5.0.x
-    - name: Restore dependencies
-      run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet run build
+  
+  test:
+    runs-on: ubuntu-latest
+    name: Test
+    depends-on: build
+
+  publish:
+    runs-on: ubuntu-latest
+    name: Publish Tofu package
+
+    steps:
+    - name: Publish to NuGet
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: src/Tofu/
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+
+ 
+
