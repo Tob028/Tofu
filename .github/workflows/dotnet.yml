@@ -16,7 +16,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
     - name: Restore
-      run: dotnet restore
+      run: dotnet restore $$ ls
     - name: Build
       run: dotnet run build --no-restore --configuration Release
   
