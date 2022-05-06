@@ -6,6 +6,8 @@ using Tofu.Cryptography;
 
 namespace Tofu.Ledger
 {
+    /// <summary>
+    /// Responsible for storing transactions until added to new block.
     public class TransactionPool
     {
         /// <summary>

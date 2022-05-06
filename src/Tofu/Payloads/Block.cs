@@ -2,6 +2,9 @@ using Tofu.Cryptography;
 
 namespace Tofu.Payloads
 {
+    /// <summary>
+    /// Class representing a block on the blockchain.
+    /// </summary>
     public class Block
     {
         /// <summary>

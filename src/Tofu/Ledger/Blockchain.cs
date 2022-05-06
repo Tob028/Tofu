@@ -2,6 +2,9 @@ using Tofu.Payloads;
 
 namespace Tofu.Ledger
 {
+    /// <summary>
+    /// Responsible for managing the blockchain.
+    /// </summary>
     public class Blockchain
     {
         /// <summary>

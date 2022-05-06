@@ -1,7 +1,7 @@
-
-
 namespace Tofu.Payloads
 {
+    /// <summary>
+    /// Class representing a transaction on the blockchain.
     public class Transaction
     {
         /// <summary>
