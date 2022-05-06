@@ -23,6 +23,10 @@ jobs:
     name: Test
     depends-on: build
 
+    steps:
+    - name: Skip for now
+      run: echo "skipping"
+
   publish:
     runs-on: ubuntu-latest
     name: Publish Tofu package
