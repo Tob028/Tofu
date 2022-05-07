@@ -18,7 +18,7 @@ jobs:
     - name: Format code
       run: dotnet format Tofu.sln && ls && cat Tofu.sln
     - name: Build
-      run: dotnet run build Tofu.sln --configuration Release
+      run: dotnet run build src/Tofu/Tofu.csproj --configuration Release
   
   test:
     runs-on: ubuntu-latest
@@ -36,7 +36,7 @@ jobs:
 
     steps:
     - name: Publish to NuGet
-      run: dotnet publish
+      run: echo "Publishing later, one the build works"
 
  
 
