@@ -16,7 +16,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
     - name: Format code
-      run: dotnet format Tofu.sln
+      run: dotnet format Tofu.sln && ls && cat Tofu.sln
     - name: Build
       run: dotnet run build Tofu.sln --configuration Release
   
