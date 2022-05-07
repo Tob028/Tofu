@@ -44,7 +44,7 @@ namespace Tofu.Persistence
         {
             File.WriteAllText(PeerFilePath, JsonSerializer.Serialize(Peers));
         }
-        
+
         /// <summary>
         /// Reads the peers from the file.
         /// </summary>

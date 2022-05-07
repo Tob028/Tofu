@@ -1,8 +1,8 @@
 using System;
 
 using Tofu;
-using Tofu.Payloads;
 using Tofu.Cryptography;
+using Tofu.Payloads;
 
 namespace Tofu.Ledger
 {
@@ -13,7 +13,7 @@ namespace Tofu.Ledger
         /// <summary>
         /// List of transactions waiting to be added to the blockchain
         /// </summary>
-        List<Transaction> TxPool = new List<Transaction>();
+        readonly List<Transaction> TxPool = new List<Transaction>();
 
         /// <summary>
         /// Capacity of the transaction pool

@@ -16,7 +16,7 @@ namespace Tofu.Cryptography
             {
                 block.Nonce = nonce;
                 var hash = block.Hash();
-                
+
                 if (hash.Substring(0, 4) == "0000")
                 {
                     return block.Nonce;

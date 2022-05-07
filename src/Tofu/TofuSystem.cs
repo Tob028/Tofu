@@ -11,7 +11,7 @@ namespace Tofu
         /// <summary>
         /// Settings for the Tofu system
         /// </summary>
-        public static ProtocolSettings Settings { get; }
+        public static ProtocolSettings? Settings { get; }
 
         /// <summary>
         /// The blockchain instance.

@@ -23,7 +23,7 @@ namespace Tofu.Payloads
         /// Network fee
         /// </summary>
         public int Fee { get; set; }
-        
+
         /// <summary>
         /// Timestamp of the transaction
         /// </summary>

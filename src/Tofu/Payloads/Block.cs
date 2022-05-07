@@ -16,7 +16,7 @@ namespace Tofu.Payloads
         /// The transactions in the block
         /// </summary>
         public List<Transaction> Transactions { get; set; }
-        
+
         /// <summary>
         /// The version of the block
         /// The version represents what part of blockchain the block is part of.

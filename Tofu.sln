@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0C8DF088-8285-4A5A-9986-5E30F6092BF6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D7C2623C-24F1-4D0F-B962-6FC3F10A8BFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tofu", "src\Tofu\Tofu.csproj", "{0C373E47-196E-4C93-A89C-34AE5C893D41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tofu", "src\Tofu\Tofu.csproj", "{54F87D5D-E482-41E5-9B9B-59A71B2CA3EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,12 +16,12 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0C373E47-196E-4C93-A89C-34AE5C893D41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0C373E47-196E-4C93-A89C-34AE5C893D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0C373E47-196E-4C93-A89C-34AE5C893D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0C373E47-196E-4C93-A89C-34AE5C893D41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54F87D5D-E482-41E5-9B9B-59A71B2CA3EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F87D5D-E482-41E5-9B9B-59A71B2CA3EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F87D5D-E482-41E5-9B9B-59A71B2CA3EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F87D5D-E482-41E5-9B9B-59A71B2CA3EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{0C373E47-196E-4C93-A89C-34AE5C893D41} = {0C8DF088-8285-4A5A-9986-5E30F6092BF6}
+		{54F87D5D-E482-41E5-9B9B-59A71B2CA3EF} = {D7C2623C-24F1-4D0F-B962-6FC3F10A8BFC}
 	EndGlobalSection
 EndGlobal
