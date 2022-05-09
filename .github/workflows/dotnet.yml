@@ -18,7 +18,7 @@ jobs:
     - name: Format code
       run: dotnet format Tofu.sln && ls && cat Tofu.sln
     - name: Build
-      run: dotnet run build src/Tofu/Tofu.csproj --configuration Release
+      run: dotnet build --project src/Tofu/Tofu.csproj --configuration Release
   
   test:
     runs-on: ubuntu-latest
