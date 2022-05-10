@@ -13,12 +13,26 @@ namespace Tofu.Ledger
         /// <summary>
         /// List of transactions waiting to be added to the blockchain
         /// </summary>
-        readonly List<Transaction> TxPool = new List<Transaction>();
+        readonly List<Transaction> Pool = new List<Transaction>();
 
         /// <summary>
         /// Capacity of the transaction pool
         /// </summary>
-        //int TransactionPoolCapacity => TofuSystem.Settings.TxPoolCapacity;
+        int TransactionPoolCapacity => Settings.TransactionPoolCapacity;
+
+        /// <summary>
+        /// The protocol settings for the <see cref="TransactionPool"/>.
+        /// </summary>
+        ProtocolSettings Settings { get; init; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TransactionPool"/> class.
+        /// </summary>
+        /// <param name="settings">The protocol settings.</param>
+        public TransactionPool(ProtocolSettings settings)
+        {
+            Settings = settings;
+        }
 
         /// <summary>
         // Add transaction to the transaction pool
@@ -26,7 +40,7 @@ namespace Tofu.Ledger
         /// <param name="transaction">Transaction to add</param>
         public void AddTransaction(Transaction transaction)
         {
-            TxPool.Add(transaction);
+            Pool.Add(transaction);
         }
     }
 }

@@ -2,7 +2,7 @@ using Tofu.Payloads;
 
 namespace Tofu.Ledger
 {
-    class CreateGenesisBlock
+    class GenesisBlock
     {
         /// <summary>
         /// Creates a genesis block

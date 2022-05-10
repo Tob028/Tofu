@@ -88,8 +88,7 @@ namespace Tofu.Payloads
         ///<returns>The hash of the block</returns>
         public string Hash()
         {
-            var hash = Crypto.ToHex(Crypto.SHA256Hash(ToString()));
-            return hash;
+            return Crypto.ToHex(Crypto.SHA256Hash(ToString()));
         }
     }
 }

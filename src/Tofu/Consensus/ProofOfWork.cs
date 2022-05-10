@@ -1,6 +1,6 @@
 using Tofu.Payloads;
 
-namespace Tofu.Cryptography
+namespace Tofu.Consensus
 {
     public class ProofOfWork
     {

@@ -4,6 +4,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
+    branches: [ main ]
 
 jobs:
   build:
@@ -18,7 +19,7 @@ jobs:
     - name: Format code
       run: dotnet format Tofu.sln && ls && cat Tofu.sln
     - name: Build
-      run: dotnet run build src/Tofu/Tofu.csproj --configuration Release
+      run: dotnet build Tofu.sln --configuration Release
   
   test:
     runs-on: ubuntu-latest
@@ -37,6 +38,3 @@ jobs:
     steps:
     - name: Publish to NuGet
       run: echo "Publishing later, one the build works"
-
- 
-

@@ -11,11 +11,19 @@ namespace Tofu
         public int TransactionPoolCapacity { get; init; }
 
         /// <summary>
+        /// The minimum number of zeros in the nonce.
+        /// </summary>
+        public int NonceLength { get; init; }
+
+        
+
+        /// <summary>
         /// Initializer for the protocol settings
         /// </summary>
         public ProtocolSettings()
         {
-            TransactionPoolCapacity = 2;
+            TransactionPoolCapacity = 5;
+            NonceLength = 4;
         }
 
         /// <summary>

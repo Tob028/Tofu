@@ -11,10 +11,12 @@
 
 | Parent | Folder | Contents |
 | ------ | ------ | -------- |
+| `src/` | `Consensus/` | Consensus mechanism, that selects the next block creator |
 | `src/` | `Cryptography/` | All classes regarding cryptography |
 | `src/` | `Ledger/` | Classes impelementing shared ledger, including `TransactionPool` and `Blockchain` |
 | `src/` | `Network/` | Peer-to-peer protocol |
 | `src/` | `Payloads/` | Classes that represent parts of blockchain |
+| `src/` | `SmartContract/` | Classes responsible for managing smart contracts |
 | `src/` | `Wallet/` | Wallet and Account implementation |
 
 ## Installation

@@ -9,18 +9,23 @@ namespace Tofu
     public class TofuSystem
     {
         /// <summary>
-        /// Settings for the Tofu system
+        /// Protocol settings for the <see cref="TofuSystem"/>.
         /// </summary>
-        public static ProtocolSettings? Settings { get; }
+        public ProtocolSettings Settings { get; init; }
 
         /// <summary>
         /// The blockchain instance.
         /// </summary>
-        public static Blockchain Blockchain { get; } = new Blockchain();
+        public Blockchain Blockchain { get; init; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TofuSystem"/> class.
+        /// </summary>
+        /// <param name="settings">The protocol settings.</param>
         public TofuSystem(ProtocolSettings settings)
         {
-            //Settings = settings;
+            Settings = settings;
+            Blockchain = new Blockchain(settings);
         }
     }
 }
