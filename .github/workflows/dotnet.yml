@@ -32,7 +32,7 @@ jobs:
 
   publishNuget:
     runs-on: ubuntu-latest
-    name: Publish Tofu package
+    name: Publish Tofu to Nuget
     needs: test
 
     steps:
@@ -45,9 +45,9 @@ jobs:
 
   publishGithub:
     runs-on: ubuntu-latest
-    name: Publish Tofu package
+    name: Publish Tofu to Github
     needs: test
 
     steps:
     - name: Skipping
-      run: "skip"
+      run: echo "skip"
