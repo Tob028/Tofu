@@ -37,7 +37,8 @@ jobs:
 
     steps:
     - name: Publish to NuGet
-      run: dotnet pack -o out -configuration Release
-      run: dotnet nuget push out/*.nupkg --source https://api.nuget.org/v3/index.json -k ${NUGET_TOKEN}
+      run: |
+        dotnet pack -o out -configuration Release
+        dotnet nuget push out/*.nupkg --source https://api.nuget.org/v3/index.json -k ${NUGET_TOKEN}
       env:
         NUGET_TOKEN: ${{ secrets.NUGET_API_KEY }}
