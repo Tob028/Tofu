@@ -4,7 +4,6 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -32,7 +31,7 @@ jobs:
 
   publishNuget:
     runs-on: ubuntu-latest
-    name: Publish Tofu package
+    name: Publish Tofu to Nuget
     needs: test
 
     steps:
@@ -40,14 +39,15 @@ jobs:
       run: |
         dotnet pack Tofu.sln -o out --configuration Release
         dotnet nuget push out/*.nupkg --source https://api.nuget.org/v3/index.json -k ${NUGET_TOKEN}
+      working-directory: ./Tofu
       env:
         NUGET_TOKEN: ${{ secrets.NUGET_API_KEY }}
 
   publishGithub:
     runs-on: ubuntu-latest
-    name: Publish Tofu package
+    name: Publish Tofu to Github
     needs: test
 
     steps:
     - name: Skipping
-      run: "skip"
+      run: echo "skip"
