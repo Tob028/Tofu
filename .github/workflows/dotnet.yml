@@ -4,7 +4,6 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -40,6 +39,7 @@ jobs:
       run: |
         dotnet pack Tofu.sln -o out --configuration Release
         dotnet nuget push out/*.nupkg --source https://api.nuget.org/v3/index.json -k ${NUGET_TOKEN}
+      working-directory: ./Tofu
       env:
         NUGET_TOKEN: ${{ secrets.NUGET_API_KEY }}
 
