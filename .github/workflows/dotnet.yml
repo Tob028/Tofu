@@ -1,8 +1,8 @@
-name: .NET Core Test and Publish
+name: Build and Test
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, develop ]
 
 jobs:
   build:
@@ -27,29 +27,3 @@ jobs:
     steps:
     - name: No tests right now
       run: echo "skipping"
-
-  publishNuget:
-    runs-on: ubuntu-latest
-    name: Publish Tofu to Nuget
-    needs: test
-
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v2
-    - name: Publish to NuGet
-      run: |
-        dotnet pack Tofu.sln -o out --configuration Release
-        dotnet nuget push out/*.nupkg --source https://api.nuget.org/v3/index.json -k ${NUGET_TOKEN}
-      env:
-        NUGET_TOKEN: ${{ secrets.NUGET_API_KEY }}
-
-  publishGithub:
-    runs-on: ubuntu-latest
-    name: Publish Tofu to Github
-    needs: test
-
-    steps:
-    - name: Skipping
-      run: echo "skip"

@@ -7,8 +7,6 @@
 
     <!-- Nuget config -->
     <PackageId>TofuProject</PackageId>
-    <Version>1.0.0</Version>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
