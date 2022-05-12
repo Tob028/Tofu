@@ -39,7 +39,9 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
     - name: Publish to NuGet
-      run: dotnet nuget push src/Tofu/bin/Release/net6.0/*.nupkg --source https://api.nuget.org/v3/index.json -k ${NUGET_TOKEN}
+      run: |
+        dotnet pack Tofu.sln -o out --configuration Release
+        dotnet nuget push out/*.nupkg --source https://api.nuget.org/v3/index.json -k ${NUGET_TOKEN}
       env:
         NUGET_TOKEN: ${{ secrets.NUGET_API_KEY }}
 
